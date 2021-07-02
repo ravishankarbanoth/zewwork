@@ -1,0 +1,138 @@
+<!---<div class="settings-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 col-xs-12">
+
+        <h1 class="text-xs-center">Your Settings</h1>
+
+        <app-list-errors [errors]="errors"></app-list-errors>
+
+        <form [formGroup]="settingsForm" (ngSubmit)="submitForm()">
+          <fieldset [disabled]="isSubmitting">
+
+            <fieldset class="form-group">
+              <input class="form-control"
+                type="text"
+                placeholder="URL of profile picture"
+                formControlName="image" />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg"
+                type="text"
+                placeholder="Username"
+                formControlName="username" />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <textarea class="form-control form-control-lg"
+                rows="8"
+                placeholder="Short bio about you"
+                formControlName="bio">
+              </textarea>
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg"
+                type="email"
+                placeholder="Email"
+                formControlName="email" />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg"
+                type="password"
+                placeholder="New Password"
+                formControlName="password" />
+            </fieldset>
+
+            <button class="btn btn-lg btn-primary pull-xs-right"
+              type="submit">
+              Update Settings
+            </button>
+
+          </fieldset>
+        </form>
+
+        <hr />
+
+        <button class="btn btn-outline-danger"
+          (click)="logout()">
+          Or click here to logout.
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>--->
+
+
+<div class="limiter margin-page">
+  <div class="container-login100">
+      <div class="wrap-login100 p-t-50 p-b-90">
+          <form [formGroup]="settingsForm" (ngSubmit)="submitForm()" class="login100-form validate-form flex-sb flex-w">
+              <span class="login100-form-title p-b-51">
+                Your Settings
+              </span>
+
+              <app-list-errors [errors]="errors"></app-list-errors>
+
+              <fieldset [disabled]="isSubmitting">
+
+                <fieldset>
+                  <div class="wrap-input100 validate-input m-b-16">
+                      <input class="input100" type="text" placeholder="URL of profile picture" formControlName="image" >
+                      <span class="focus-input100"></span>
+                  </div>
+                </fieldset>
+              
+                <fieldset>
+                  <div class="wrap-input100 validate-input m-b-16">
+                    <input class="input100" type="text" placeholder="Username" formControlName="username">
+                    <span class="focus-input100"></span>
+                  </div>
+                </fieldset>
+                
+                <fieldset>
+                  <div class="wrap-input100 validate-input m-b-16">
+                    <input class="input101" type="text" rows="8" placeholder="bio about you" formControlName="bio">
+                    <span class="focus-input100"></span>
+                  </div>
+                </fieldset>
+              
+                <fieldset>
+                  <div class="wrap-input100 validate-input m-b-16">
+                    <input class="input100" type="email" placeholder="Email" formControlName="email">
+                    <span class="focus-input100"></span>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <div class="wrap-input100 validate-input m-b-16">
+                    <input class="input100" type="password" placeholder="New Password" formControlName="password">
+                    <span class="focus-input100"></span>
+                  </div>
+                </fieldset>
+
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit">
+                      Update Settings
+                    </button>
+                </div>
+            </fieldset>
+          </form>
+
+          <hr />
+
+        <button class="login100-form-btn"
+          (click)="logout()">
+          Or click here to logout.
+        </button>
+
+      </div>
+  </div>
+</div>
+
+
+<div id="dropDownSelect1"></div>
+

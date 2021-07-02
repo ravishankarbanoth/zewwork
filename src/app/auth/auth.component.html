@@ -1,0 +1,101 @@
+<!--<div class="auth-page">
+  <div class="container page">
+    <div class="row">
+
+      <div class="col-md-6 offset-md-3 col-xs-12">
+        <h1 class="text-xs-center">{{ title }}</h1>
+        <p class="text-xs-center">
+          <a [routerLink]="['/login']" *ngIf="authType == 'register'">Have an account?</a>
+          <a [routerLink]="['/register']" *ngIf="authType == 'login'">Need an account?</a>
+        </p>
+        <app-list-errors [errors]="errors"></app-list-errors>
+        <form [formGroup]="authForm" (ngSubmit)="submitForm()">
+          <fieldset [disabled]="isSubmitting">
+            <fieldset class="form-group">
+              <input
+                formControlName="username"
+                placeholder="Username"
+                class="form-control form-control-lg"
+                type="text"
+                *ngIf="authType == 'register'" />
+            </fieldset>
+            <fieldset class="form-group">
+              <input
+                formControlName="email"
+                placeholder="Email"
+                class="form-control form-control-lg"
+                type="text" />
+            </fieldset>
+            <fieldset class="form-group">
+              <input
+                formControlName="password"
+                placeholder="Password"
+                class="form-control form-control-lg"
+                type="password" />
+            </fieldset>
+            <button class="btn btn-lg btn-primary pull-xs-right" [disabled]="!authForm.valid" type="submit">
+              {{ title }}
+            </button>
+          </fieldset>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>-->
+
+<div class="limiter margin-page">
+  <div class="container-login100">
+      <div class="wrap-login100 p-t-50 p-b-90">
+        
+          <form [formGroup]="authForm" (ngSubmit)="submitForm()" class="login100-form flex-sb flex-w">
+              <span class="login100-form-title p-b-51">
+                {{ title }}
+              </span>
+              <app-list-errors [errors]="errors"></app-list-errors>
+              <fieldset [disabled]="isSubmitting">
+
+                <fieldset>
+                  <div class="wrap-input100 m-b-16">
+                      <input class="form-control form-control-lg" class="input100" type="text" formControlName="username" placeholder="Username" *ngIf="authType == 'register'" />
+                      <span class="focus-input100"></span>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <div class="wrap-input100 validate-input m-b-16">
+                      <input class="input100" type="text"  formControlName="email" name="email" placeholder="Email">
+                      <span class="focus-input100"></span>
+                  </div>
+                </fieldset>
+                
+                <fieldset>
+                  <div class="wrap-input100 validate-input m-b-16">
+                      <input class="input100" type="password" formControlName="password" name="pass" placeholder="Password">
+                      <span class="focus-input100"></span>
+                  </div>
+                </fieldset>
+              
+                <div class="flex-sb-m w-full p-t-3 p-b-24">
+                    <div>
+                        <a class="txt1" [routerLink]="['/login']" *ngIf="authType == 'register'">Have an account?</a>
+                        <a class="txt1" [routerLink]="['/register']" *ngIf="authType == 'login'">Need an account?</a>
+                    </div>
+                </div>
+
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" [disabled]="!authForm.valid" type="submit">
+                      {{ title }}
+                    </button>
+                </div>
+              </fieldset>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+<div id="dropDownSelect1"></div>
+
+
+

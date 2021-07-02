@@ -1,0 +1,116 @@
+<!--<div class="editor-page">
+  <div class="container page">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-xs-12">
+
+        <app-list-errors [errors]="errors"></app-list-errors>
+
+        <form [formGroup]="articleForm">
+          <fieldset [disabled]="isSubmitting">
+
+            <fieldset class="form-group">
+              <input class="form-control form-control-lg"
+                formControlName="title"
+                type="text"
+                placeholder="Article Title" />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control"
+                formControlName="description"
+                type="text"
+                placeholder="What's this article about?" />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <textarea class="form-control"
+                formControlName="body"
+                rows="8"
+                placeholder="Write your article (in markdown)">
+              </textarea>
+            </fieldset>
+
+            <fieldset class="form-group">
+              <input class="form-control"
+                type="text"
+                placeholder="Enter tags"
+                [formControl]="tagField"
+                (keyup.enter)="addTag()" />
+
+              <div class="tag-list">
+                <span *ngFor="let tag of article.tagList"
+                  class="tag-default tag-pill">
+                  <i class="ion-close-round" (click)="removeTag(tag)"></i>
+                  {{ tag }}
+                </span>
+              </div>
+            </fieldset>
+
+            <button class="btn btn-lg pull-xs-right btn-primary" type="button" (click)="submitForm()">
+              Publish Article
+            </button>
+
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+<div class="limiter margin-page">
+  <div class="container-login100">
+      <div class="wrap-login100 p-t-50 p-b-90">
+        
+        <app-list-errors [errors]="errors"></app-list-errors>
+
+          <form [formGroup]="articleForm" class="login100-form flex-sb flex-w">
+      
+              <fieldset [disabled]="isSubmitting">
+
+                <fieldset>
+                  <div class="wrap-input100 m-b-16">
+                      <input class="form-control form-control-lg" class="input100" type="text" formControlName="title" placeholder="Article Title"/>
+                      <span class="focus-input100"></span>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <div class="wrap-input100 validate-input m-b-16">
+                      <input class="input100" type="text" formControlName="description" placeholder="What's this article about?">
+                      <span class="focus-input100"></span>
+                  </div>
+                </fieldset>
+                
+                <fieldset>
+                  <div class="wrap-input100 validate-input m-b-16">
+                      <input class="input102" type="text" formControlName="body" placeholder="Write your article?">
+                      <span class="focus-input100"></span>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <div class="wrap-input100 validate-input m-b-16">
+                      <input class="input100" type="text" placeholder="Enter tags" [formControl]="tagField" (keyup.enter)="addTag()">
+                      <span class="focus-input100"></span>
+                      <div class="tag-list"> <span *ngFor="let tag of article.tagList" class="tag-default tag-pill">
+                          <i class="ion-close-round" (click)="removeTag(tag)"></i>
+                          {{ tag }}
+                        </span>
+                      </div>
+                  </div>
+                </fieldset>
+
+                <div class="container-login100-form-btn m-t-17">
+                    <button (click)="submitForm()" class="login100-form-btn" type="submit">
+                      Publish Article
+                    </button>
+                </div>
+              </fieldset>
+          </form>
+      </div>
+  </div>
+</div>
+
+<div id="dropDownSelect1"></div>
